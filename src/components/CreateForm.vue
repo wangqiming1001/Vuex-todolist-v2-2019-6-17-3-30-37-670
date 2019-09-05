@@ -18,6 +18,7 @@
             handleCreateTodo: function () {
                 this.$store.dispatch('addResponse',this.inputtingItem);
                 //this.$store.commit("createToDoList",this.inputtingItem);
+                this.$store.dispatch("putResponse");
             }
         }
     }

@@ -59,7 +59,6 @@ export default {
         },
         addResponse:function(store,inputParam){
             const url = "http://5b4dcb2aec112500143a2311.mockapi.io/api/todos";
-            console.log(inputParam,"11111");
             axios.post(url,{
                 content:inputParam,
                 status:"actice"
@@ -74,7 +73,18 @@ export default {
             })
         },
         putResponse:function(){
-
+            const url = "http://5b4dcb2aec112500143a2311.mockapi.io/api/todos/112";
+            axios.post(url,{
+                id:112,
+                content:inputParam,
+                status:"actice"
+            }).then(function(response){
+                console.log(response);
+                store.queryResponse();
+            }).catch(
+                function(error){
+                console.log(error);
+            })
         },
         deleteResponse:function(){
             const url = "http://5b4dcb2aec112500143a2311.mockapi.io/api/todos";
